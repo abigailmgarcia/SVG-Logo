@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateShapesShapes = require("./lib/shapes");
+const generateShapes = require("./lib/shapes");
 
 inquirer
     .prompt([
