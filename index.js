@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const  generateSvg = require('./lib/shapes')
+const  shapeUtil = require('./lib/shapes')
 
 const colorValidator = (value) => {
     const isValid = /^([a-z]+|\#[0-9A-Fa-f]{6}|\#[0-9A-Fa-f]{3})$/i.test(value);
@@ -37,9 +37,9 @@ inquirer
         },
     ])
     .then((answers) => {
-        const svgContent = generateSvg(answers);
+        const svgContent = shapeUtil.generateSvg(answers);
 
-        fs.writeFile('logo.svg', svgContent, (err) =>{
+        fs.writeFile('logo.svg', svgContent, err =>{
          err ? console.error(err) : console.log('Generated logo.svg')
         });
     });
