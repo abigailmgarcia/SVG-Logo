@@ -43,3 +43,5 @@ inquirer
          err ? console.error(err) : console.log('Generated logo.svg')
         });
     });
+
+    
